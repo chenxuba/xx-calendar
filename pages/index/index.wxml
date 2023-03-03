@@ -1,0 +1,2 @@
+<!--index.wxml-->
+<xx-calendar use_date_arr="{{use_date_arr}}"></xx-calendar>

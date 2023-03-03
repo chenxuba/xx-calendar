@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "xx-calendar": "../../components/xx-calendar/xx-calendar"
+    },
+    "navigationBarTitleText": "打卡记录",
+    "navigationBarBackgroundColor": "#E1EEF6"
+}

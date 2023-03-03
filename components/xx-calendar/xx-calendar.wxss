@@ -1,0 +1,97 @@
+/* components/xx-calendar/xx-calendar.wxss */
+/* 头部样式start */
+.title-wrap{
+    background-color: #fff;
+    padding-top: 20rpx;
+    border-bottom: 1px solid #D4DBDC;
+    padding-bottom: 10rpx;
+}
+.change-date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.change-date image{
+    width: 50rpx;
+    height: 50rpx;
+    transform: scale(1.5);
+    display: flex;
+}
+.year-mouth{
+    margin: 0 60rpx;
+}
+.week{
+    display: flex;
+    justify-content: space-between;
+    font-size: 24rpx;
+    margin-top: 30rpx;
+    color: #1F1F1F;
+}
+.week text{
+    flex: 1;
+    text-align: center;
+}
+/* 头部样式end */
+/* 日期区域样式start */
+.date-wrap{
+    /* height: 500rpx; */
+    background-color: #F8F9F9;
+    display: flex;
+    flex-wrap: wrap;
+}
+.mouth-date{
+    display: flex;
+    font-size: 24rpx;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 7);
+    border-bottom: 1rpx solid rgb(229, 234, 235);
+    padding-top: 10rpx;
+}
+.last-mouth text,.next-mouth text{
+    opacity: 0;
+}
+.mouth-date .day{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #1F1F1F;
+
+}
+.mouth-date  .day-nongli{
+    font-size: 18rpx;
+    color: #888888;
+    margin-bottom: 6rpx;
+}
+.mouth-date .color{
+    color: #8096F0;
+}
+.mouth-date  .day-dot{
+    width: 8rpx;
+    height: 8rpx;
+    border-radius: 50%;
+    background-color: #8096F0;
+}
+.mouth-date .day-box{
+    border-radius: 10rpx;
+    width: 86rpx;
+    padding-top: 6rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10rpx;
+    padding-bottom: 8rpx;
+}
+.mouth-date .active{
+    background-color: #A1D7EE;
+}
+.mouth-date .active text{
+    color: #fff;
+}
+.mouth-date .active .day-text{
+    font-weight: 600;
+}
+.not-dot{
+    width: 8rpx;
+    height: 8rpx;
+}

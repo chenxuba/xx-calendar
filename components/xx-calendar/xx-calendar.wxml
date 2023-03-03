@@ -1,0 +1,46 @@
+<!--components/xx-calendar/xx-calendar.wxml-->
+<!-- 头部 -->
+<view class="title-wrap">
+    <view class="change-date">
+        <view class="prev" bindtap="changeMonthFun" data-type="prev">
+            <image src="./prev.png" mode="" />
+        </view>
+        <view class="year-mouth">
+            {{year}}年 {{month}}月
+        </view>
+        <view clstyle="next" bindtap="changeMonthFun" data-type="next">
+            <image src="./next.png" mode="" />
+        </view>
+    </view>
+    <view class="week">
+        <text wx:for="{{weeksArr}}" wx:key="*this">{{item}}</text>
+    </view>
+</view>
+<!-- 日期 -->
+<view class="date-wrap">
+    <!-- 上个月日期 -->
+    <view wx:for="{{lastMonthDays}}" wx:key="*this" class="mouth-date last-mouth">
+        <text class="day-text">{{item.date}}</text>
+        <!-- 农历还未配置，不用管，你可以二开这个组件，因为我们的设计图不显示上下月的日期，故不渲染也可以 -->
+        <text class="day-nongli">十五</text>
+        <text class="day-dot"></text>
+    </view>
+    <!-- 当月日期 -->
+    <view class="mouth-date current-mouth" wx:for="{{nowMonthDays}}" wx:key="*this" bindtap="selectDate"
+     data-item="{{item}}" data-type="nowMonthDays" data-index="{{index}}"
+    >
+       <view class="day-box {{item.isNowMonthDay?'active':''}}">
+        <text class="day-text {{item.color?'color':''}}">{{item.date}}</text>
+        <!-- day 后面会换成农历展示 -->
+        <text class="day-nongli">{{item.day}}</text>
+        <text class=" {{item.color?'day-dot':'not-dot'}}"></text>
+       </view>
+    </view>
+    <!-- 下个月日期 -->
+    <view class="mouth-date next-mouth" wx:for="{{nextMonthDays}}" wx:key="*this">
+        <text class="day-text">{{item.date}}</text>
+        <!-- 农历还未配置，不用管，你可以二开这个组件，因为我们的设计图不显示上下月的日期，故不渲染也可以 -->
+        <text class="day-nongli">十五</text>
+        <text class="day-dot"></text>
+    </view>
+</view>
